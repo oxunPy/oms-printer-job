@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AB_km" pageWidth="170" pageHeight="113" columnWidth="170" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="80cfd8e8-3e2c-4548-8617-60c1269f3a2a">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="kmCode" class="java.io.InputStream"/>
+	<field name="abIcon" class="java.io.InputStream"/>
+	<field name="goodName" class="java.lang.String"/>
+	<field name="madeInCountry" class="java.lang.String"/>
+	<field name="km" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="98" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="cm"/>
+			<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+			<image>
+				<reportElement key="" isPrintRepeatedValues="false" x="12" y="18" width="70" height="70" uuid="cea46f0f-a631-4783-b0b6-d39b5f3ed871">
+					<property name="local_mesure_unitwidth" value="cm"/>
+					<property name="local_mesure_unitheight" value="cm"/>
+					<property name="local_mesure_unitx" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="local_mesure_unity" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$F{kmCode}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="82" y="23" width="86" height="28" uuid="29a5c5c2-6c0a-46a0-b1ac-7e36497330aa">
+					<property name="local_mesure_unitheight" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{goodName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="52" width="86" height="19" uuid="620ea50c-f8d0-4fa5-9bb2-39270c8054cf">
+					<property name="local_mesure_unity" value="cm"/>
+					<property name="local_mesure_unitheight" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Страна производства:\n" + $F{madeInCountry}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="110" y="1" width="56" height="20" uuid="2e9f0418-ca80-46a6-9dec-2a16974bdfc6">
+					<property name="local_mesure_unitheight" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="local_mesure_unitwidth" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$F{abIcon}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="82" y="71" width="86" height="22" uuid="fd965ba4-d656-4ad5-9e6e-569bdaadd034">
+					<property name="local_mesure_unitheight" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{km}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
